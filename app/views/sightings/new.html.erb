@@ -1,0 +1,21 @@
+<%= form_for @sight do |a| %>
+<%=a.label :Aminal %>
+   <%=a.text_field :aminal_id %>
+
+<%=a.label :Date %>
+   <%=a.text_field :date %>
+
+<%=a.label :Time %>
+   <%=a.text_field :time %>
+
+<%=a.label :Latitude %>
+   <%=a.text_field :latitude %>
+ 
+ <%=a.label :Longitude%>
+   <%=a.text_field :longitude %>
+   
+  <%=a.label :Regions %>
+   <%=a.text_field :regions %>
+
+   <%=a.submit "Submit" %>
+<% end %>

@@ -1,0 +1,9 @@
+<h1> Animal </h1>
+<% @list.each do |list| %>
+    <li> <%= link_to list.commonname, aminal_path(list)  %>  <%= link_to "Update", edit_aminal_path(list), class:"btn btn-primary" %>
+    <%= link_to "Delete", aminal_path(list), method: :delete, data: {confirm: 'Are you sure?'} ,class:"btn btn-primary" %> 
+ </li> 
+<% end %>
+
+<%= link_to "New", new_aminal_path, class:"btn btn-primary" %>
+ 

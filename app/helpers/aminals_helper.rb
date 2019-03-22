@@ -1,0 +1,2 @@
+module AminalsHelper
+end

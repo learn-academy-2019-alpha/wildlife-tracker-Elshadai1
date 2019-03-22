@@ -1,0 +1,26 @@
+<%= @add.commonname %>
+<%= @add.latinname %>
+<%= @add.kingdom %>
+
+
+<%= @add.sightings.count %>
+
+
+<%= link_to "Delete", sighting_path(@add, @sight), method: :delete, data: {confirm: 'Are you sure?'} %> 
+
+<%= link_to "Update Sighting", edit_sighting_path({aminal_id: @add}) %> 
+
+<%= link_to "Add new Sighting", new_sighting_path({aminal_id: @add.id}) %> 
+
+
+<ul>
+ <% @add.sightings.each do |sighting| %>
+   <p>Sighting Number: <%=sighting.id %></p>
+   <p>Sighting Date: <%= sighting.date %></p>
+   <p>Sighting Time: <%= sighting.time %></p>
+   <p>Sighting Latitude & Longitude: <%= sighting.latitude %> - <%= sighting.longitude %></p>
+   <p>Sighting Region: <%= sighting.regions %></p>
+   <br />
+ <% end %>
+</ul>
+

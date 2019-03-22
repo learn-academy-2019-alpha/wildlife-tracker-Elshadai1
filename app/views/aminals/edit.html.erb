@@ -1,0 +1,12 @@
+<%= form_for @add do |a| %>
+<%=a.label :Commonname %>
+   <%=a.text_field :commonname %>
+
+<%=a.label :Latinname %>
+   <%=a.text_field :latinname %>
+
+<%=a.label :Kingdom %>
+   <%=a.text_field :kingdom %>
+
+   <%=a.submit "Submit" %>
+<% end %>
