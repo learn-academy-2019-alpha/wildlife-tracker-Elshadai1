@@ -19,11 +19,11 @@ class SightingsController < ApplicationController
     end
     
     def edit
-         @sight = Sighting.find(params[:aminal_id])
+         @sight = Sighting.find(params[:id])
     end    
     
     def update
-        @sight = Sighting.find(params[:aminal_id])
+        @sight = Sighting.find(params[:id])
         @sight.update sight_params
             redirect_to aminal_path(@sight.aminal)
     end
